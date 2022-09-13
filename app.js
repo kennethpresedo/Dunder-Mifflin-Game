@@ -6,7 +6,9 @@ const modalEl = document.getElementById('modal');
 const startButtonJim = document.getElementById('jim');
 const startButtonDwight = document.getElementById('dwight');
 const h1El = document.getElementById('select');
-
+const closeTagEl = document.querySelector('.close-tag');
+const jimBoardEl = document.getElementById('jim-gameboard');
+const dwightBoardEl = document.getElementById('dwight-gameboard');
 
 
 
@@ -15,6 +17,7 @@ const h1El = document.getElementById('select');
 ///////////////////////////////////////////////////////////////////////////////
 //Functions  //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
+
 const openModal = () => {
     startEl.style.display = 'none';
     modalEl.style.visibility = 'visible';
@@ -43,24 +46,31 @@ const instructionsDwight = () => {
 
 }
 
-// const nextSlide = () => {
-//     modalEl.innerHTML = '';
-//     modalEl.innerHTML = `
-//     <h4>Instructions</h4>
-//     `;
-// }
+const returnMain = () => {
+    jimBoardEl.style.display = 'none';
+    dwightBoardEl.style.display = 'none';
+    startEl.style.display = 'visible';
+}
+const openJIm = () => {
+    instructionsJim.style.display = 'none';
+    jimBoardEl.style.display = 'visible';
+};
+
+const openDwight = () => {
+    instructionsDwight.style.display = 'none';
+    dwightBoardEl.style.display = 'visible';
+};
+
 
 
 
 /////////////////////////////////////////////////////////////////////////////////
 //Event Listners  ///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
-//modalEl.addEventListener('click', openModal)
-// img.addEventListener('click', () => {
-//     console.log('image clicked')
-// })
 
 startEl.addEventListener('click', openModal);
 startButtonJim.addEventListener('click', instructionsJim);
 startButtonDwight.addEventListener('click', instructionsDwight);
-// modalEl.addEventListener('click', nextSlide);
+closeTagEl.addEventListener('click', returnMain);
+jimBoardEl.addEventListener('click', openJIm);
+dwightBoardEl.addEventListener('click', openDwight);

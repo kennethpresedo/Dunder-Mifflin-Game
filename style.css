@@ -29,7 +29,7 @@ body {
 } 
 
 #start-btn-container{
-    visibility: hidden;
+    visibility: visible;
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -55,8 +55,12 @@ body {
     display: inline-block;
 }
 
+.select {
+    padding: 0;
+}
+
 #jim-gameboard {
-    visibility: visible;
+    visibility: hidden;
     height: 100%;
     width: 100%;
     background-color: rgba(59, 114, 204, 0.311);
@@ -97,4 +101,11 @@ body {
     flex-direction: column;
     align-items: center;
     flex: 2;
+}
+
+.close-tag {
+    display: flex;
+    flex: 1;
+    padding-left: 20px;
+    padding-top: 15px;
 }
