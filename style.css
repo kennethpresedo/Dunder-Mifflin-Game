@@ -1,7 +1,6 @@
-
 body {
     background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/01/High-Res-Crumpled-and-Creased-paper-Texture1.jpg);
-    position:relative;
+    position: relative;
     background-size: cover;
     font-family: 'Special Elite', cursive;
 }
@@ -9,7 +8,7 @@ body {
 #modal {
     visibility: hidden;
     height: 440px;
-    width:  800px;
+    width: 800px;
     border-radius: 30px;
     background-color: rgba(59, 114, 204, 0.311);
     box-shadow: 0 2px 2px rgba(167, 85, 85, 0.2);
@@ -21,14 +20,14 @@ body {
     margin: 0 auto;
     display: flex;
     text-align: center;
-    transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     padding: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
     align-items: center;
-} 
+}
 
-#start-btn-container{
+#start-btn-container {
     visibility: visible;
     display: flex;
     flex-direction: row;
@@ -42,15 +41,8 @@ body {
     align-items: center;
 }
 
-/* .transparent-button {
-    visibility: visible;
-    background-color: transparent;
-    border: 0px;
-    justify-content: center;
-    align-items: center;
-} */
-
-#dwight-button, #jim-button{
+#dwight-button,
+#jim-button {
     background-color: transparent;
     display: inline-block;
 }
@@ -67,14 +59,15 @@ body {
     position: fixed;
     top: 0%;
     left: 0;
-    right: 0;  
+    right: 0;
     margin: 0 auto;
-    transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: flex;
     flex-wrap: wrap;
 }
 
 #jim-banner {
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,30 +75,50 @@ body {
 }
 
 #dwight-gameboard {
-        visibility: hidden;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(59, 114, 204, 0.311);
-        position: fixed;
-        top: 0%;
-        left: 0;
-        right: 0;  
-        margin: 0 auto;
-        transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94); 
-        display: flex;
-        flex-wrap: wrap;
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(59, 114, 204, 0.311);
+    position: fixed;
+    top: 0%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #dwight-banner {
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 2;
 }
 
-.close-tag {
+.closetag-jim,
+.closetag-dwight {
     display: flex;
     flex: 1;
     padding-left: 20px;
     padding-top: 15px;
+}
+
+.next-tag-jim,
+.next-tag-dwight {
+    visibility: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15%;
+}
+
+.start-jim,
+.start-dwight {
+    visibility: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15%;
 }
