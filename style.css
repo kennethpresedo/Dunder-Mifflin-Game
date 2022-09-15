@@ -64,14 +64,18 @@ body {
     transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: flex;
     flex-wrap: wrap;
+    margin-top: 25px; 
+    flex-direction: column;
 }
 
 #jim-banner {
     visibility: hidden;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
     flex: 2;
+    max-height: 100px;
 }
 
 #dwight-gameboard {
@@ -87,14 +91,18 @@ body {
     transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: flex;
     flex-wrap: wrap;
+    margin-top: 25px;
+    flex-direction: column;
 }
 
 #dwight-banner {
     visibility: hidden;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
     flex: 2;
+    max-height: 100px;
 }
 
 .closetag-jim,
@@ -102,16 +110,18 @@ body {
     display: flex;
     flex: 1;
     padding-left: 20px;
-    padding-top: 15px;
+    /* padding-top: 5px; */
 }
 
 .next-tag-jim,
 .next-tag-dwight {
     visibility: hidden;
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: flex-end;
-    padding-top: 15%;
+    padding-top: 15%; 
+    margin-right: 10px; 
+    flex: 1; 
 }
 
 .start-jim,
@@ -120,5 +130,27 @@ body {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    padding-top: 15%;
 }
+
+
+#jim-modal,
+#dwight-modal {
+    min-height: 10vw;
+    background: #99c3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  #jim-score,
+  #dwight-score {
+    min-height: 10vw;
+    background: #d9dfff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }

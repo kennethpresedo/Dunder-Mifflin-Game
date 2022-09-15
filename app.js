@@ -22,9 +22,15 @@ const dwightBannerEl = document.getElementById('dwight-banner');
 //Functions  //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
+closeTagJim.style.visibility = 'hidden';
+closeTagDwight.style.visibility = 'hidden';
+
 const openModal = () => {
     startEl.style.display = 'none';
     modalEl.style.visibility = 'visible';
+    closeTagJim.style.visibility = 'visible';
+    jimBoardEl.style.visibility = 'hidden';
+    dwightBoardEl.style.visibility = 'hidden';
 }
 
 const instructionsJim = () => {
