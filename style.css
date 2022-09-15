@@ -55,33 +55,9 @@ body {
     visibility: hidden;
     height: 100%;
     width: 100%;
-    background-color: rgba(59, 114, 204, 0.311);
-    position: fixed;
-    top: 0%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 25px; 
-    flex-direction: column;
-}
-
-#jim-banner {
-    visibility: hidden;
-    display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
-    justify-content: center;
-    flex: 2;
-    max-height: 100px;
-}
-
-#dwight-gameboard {
-    visibility: hidden;
-    height: 100%;
-    width: 100%;
+    /* background-image: url(https://c.tenor.com/5Q_WkSBGoJcAAAAd/the-office-dunder-mifflin.gif);  */
+    /* background-image: url(https://68.media.tumblr.com/de65188402f78489785691a0585f1686/tumblr_o1qdcwxO8E1qk8rzpo1_500.gif);  */
+    background-size: cover;
     background-color: rgba(59, 114, 204, 0.311);
     position: fixed;
     top: 0%;
@@ -93,6 +69,39 @@ body {
     flex-wrap: wrap;
     margin-top: 25px;
     flex-direction: column;
+    color: #0f5298;
+}
+
+#jim-banner {
+    visibility: hidden;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
+    flex: 2;
+    max-height: 100px;
+    color: #0f5298;
+}
+
+#dwight-gameboard {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    /* background-image: url(https://i.chzbgr.com/full/9480329216/h6847B473/packaged-goods-dunder-mifflin-dwight-anbistanttothe-regio-717555o172-boranteon);  */
+    /* background-image: url(https://66.media.tumblr.com/26b96cb2cb8f7e106e6e2d30ec51cc17/tumblr_pvj6694jRz1ysl7xgo1_500.gif); */
+    background-size: cover;
+    background-color: rgba(59, 114, 204, 0.311);
+    position: fixed;
+    top: 0%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    flex-direction: column;
+    color: #0f5298;
 }
 
 #dwight-banner {
@@ -103,6 +112,7 @@ body {
     justify-content: center;
     flex: 2;
     max-height: 100px;
+    color: #0f5298;;
 }
 
 .closetag-jim,
@@ -119,9 +129,9 @@ body {
     /* position: relative; */
     display: flex;
     justify-content: flex-end;
-    padding-top: 15%; 
-    margin-right: 10px; 
-    flex: 1; 
+    padding-top: 15%;
+    margin-right: 10px;
+    flex: 1;
 }
 
 .start-jim,
@@ -142,10 +152,11 @@ body {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-  }
-  
-  #jim-score,
-  #dwight-score {
+    opacity: 75%;
+}
+
+#jim-score,
+#dwight-score {
     min-height: 10vw;
     background: #d9dfff;
     display: flex;
@@ -153,4 +164,36 @@ body {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-  }
+    opacity: 75%;
+}
+
+#choiceJimA,
+#choiceJimB,
+#choiceDwightA,
+#choiceDwightB {
+    background-color: #d9dfff;
+    border: none;
+    color: #0f5298;
+    padding: 25px 90px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+}
+
+#choiceJimA:hover,
+#choiceJimB:hover,
+#choiceDwightA:hover,
+#choiceDwightB:hover {
+    /* background-color: #0f5298; */
+    background-color: #0f5298;
+    border: none;
+    color: #d9dfff;
+    padding: 27x 92px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+}

@@ -16,7 +16,12 @@ const closeTagJim = document.querySelector('.closetag-jim');
 const closeTagDwight = document.querySelector('.closetag-dwight');
 const jimBannerEl = document.getElementById('jim-banner');
 const dwightBannerEl = document.getElementById('dwight-banner');
-
+const choiceJimAbuttonEl = document.getElementById('choiceJimA');
+const choiceJimBbuttonEl = document.getElementById('choiceJimB');
+const choiceDwightAbuttonEl = document.getElementById('choiceDwightA');
+const choiceDwightBbuttonEl = document.getElementById('choiceDwightB');
+const jimTrackerEl = document.getElementById('jim-score');
+const dwightTrackerEl = document.getElementById('dwight-score');
 
 ///////////////////////////////////////////////////////////////////////////////
 //Functions  //////////////////////////////////////////////////////////////////
@@ -28,7 +33,7 @@ closeTagDwight.style.visibility = 'hidden';
 const openModal = () => {
     startEl.style.display = 'none';
     modalEl.style.visibility = 'visible';
-    closeTagJim.style.visibility = 'visible';
+    closeTagJim.style.visibility = 'visible';  
     jimBoardEl.style.visibility = 'hidden';
     dwightBoardEl.style.visibility = 'hidden';
 }
@@ -87,6 +92,23 @@ const returnMain = () => {
     location.reload()
 };
 
+const jimSelectionA = () => {
+    jimTrackerEl.innerHTML = 'klk'
+};
+
+const jimSelectionB = () => {
+    jimTrackerEl.innerHTML = 'klk'
+};
+
+const dwightSelectionA = () => {
+    dwightTrackerEl.innerHTML = 'klk'
+};
+
+const dwightSelectionB = () => {
+    dwightTrackerEl.innerHTML = 'klk'
+};
+
+
 /////////////////////////////////////////////////////////////////////////////////
 //Event Listners  ///////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
@@ -101,3 +123,7 @@ startJimEl.addEventListener('click', startJim);
 startDwightEl.addEventListener('click', startDwight);
 closeTagJim.addEventListener('click', returnMain);
 closeTagDwight.addEventListener('click', returnMain);
+choiceJimAbuttonEl.addEventListener('click', jimSelectionA);
+choiceJimBbuttonEl.addEventListener('click', jimSelectionB);
+choiceDwightAbuttonEl.addEventListener('click', dwightSelectionA);
+choiceDwightBbuttonEl.addEventListener('click', dwightSelectionB);
