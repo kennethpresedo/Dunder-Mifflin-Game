@@ -128,11 +128,62 @@ choiceJimBbuttonEl.addEventListener('click', jimSelectionB);
 choiceDwightAbuttonEl.addEventListener('click', dwightSelectionA);
 choiceDwightBbuttonEl.addEventListener('click', dwightSelectionB);
 
-const dwightObject = {
-    shirt : mustard
-}
+const dwightsAdventures = {
+    starting: 'What color shirt is Dwight wearing today?',
+    mustard: {
+        q: 'Micheal has put you in charge of selecting an insurance plan for the office. You can cut costs and make Micheals boss, Jan, happy but also upsetting your colleuges or pick a sweet plan and make your coworkers happy but uposet Jan',
+        badPlan: {
+                q: 'Your coworkers are now upset with you for picking such a barebones insurance plan, they all mde you feel guilty',
+                leaveForStaples: {
+                        q: 'You may now take revenge on Dunder Mifflin by stealing their clients',
+                        stealClients: {
+                            result: 'game-over, youll never become ARM',
+                        },
+                        dontStealClients: {
+                            result: 'game-over, youll never become ARM',
+                        }
+                },
+                makeItUpToEverone: {
+                    q: 'Youre attempt at forgivness is buying everyone pizza, where are you ordering from?',
+                    pizzaByAlfrado: {
+                        result: 'game-over, youll never become ARM',
+                    },
+                    alfradosPizzaCafe: {
+                        result: 'Congratulations!!! Youre now the offical ARM'
+                    }
+                },
+        },
+        goodPlan: {
+            q: 'All of your coworkers are happy with you, but now Micheal is upset with you because Jan is yelling at him for not cutting costs',
+            requestAPerformanceReview: {
+                q: 'Micheal is still very annoyed with you and graded you pooprly, what can you do now?',
+                mintChoclateChipIceCream: {
+                    result: 'Congratulations!!! Youre now the offical ARM',
+                },
+                pizzaByAlfrado: {
+                    result: 'game-over, youll never become ARM',
+            },
+            meetWithJanBehindMichealsBack: {
+                q:  'Micheal found out you went behind his back to meet with his boss Jan, hes not happy with you, whats your next move?',
+                doMichealsLaudry: {
+                    result: 'Wasnt enough, hes still mad at you, youll never become ARM',
+                },
+                meatBallParmSub: {
+                    result: 'its Alfrados worst sub, you did this to yourself, youll never become ARM',
+                }
+            },
 
-/* 
-Dunder-Mifflin-Game
-This is a choose your own adventure game with an option to select 2 characters, Dwight Schrute or Jim Halpert. The goal of playing with Dwight Schrute is go get promoted from Assistant to the Regional Manager to Assistant Regional Manager. Choose correctly and you'll be rewarded accordingly, choose wrong and you'll be in touble or worse, fired. The goal of playing with Jim Halpert is go mess with your favorite coworker, Dwight Schrute without getting caught. Choose correctly and you'll get Dwight to beg for mercy, choose wrong and you'll be fired.
-*/
+        },
+    },
+    spicyBrown: {
+        q: 'You have been selected to be the saftey officer or Dunder Mifflin Scranton, should you start a fire in sakes of teaching fire saftey in the office?',
+        noSafetyMoment: {
+
+        },
+        yesSafteyMoment: {
+
+        },
+
+    },
+},
+}
