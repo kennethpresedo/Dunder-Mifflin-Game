@@ -127,3 +127,7 @@ choiceJimAbuttonEl.addEventListener('click', jimSelectionA);
 choiceJimBbuttonEl.addEventListener('click', jimSelectionB);
 choiceDwightAbuttonEl.addEventListener('click', dwightSelectionA);
 choiceDwightBbuttonEl.addEventListener('click', dwightSelectionB);
+
+const dwightObject = {
+    shirt : mustard;
+}
