@@ -55,8 +55,6 @@ body {
     visibility: hidden;
     height: 100%;
     width: 100%;
-    /* background-image: url(https://c.tenor.com/5Q_WkSBGoJcAAAAd/the-office-dunder-mifflin.gif);  */
-    /* background-image: url(https://68.media.tumblr.com/de65188402f78489785691a0585f1686/tumblr_o1qdcwxO8E1qk8rzpo1_500.gif);  */
     background-size: cover;
     background-color: rgba(59, 114, 204, 0.311);
     position: fixed;
@@ -75,8 +73,6 @@ body {
 #jim-banner {
     visibility: hidden;
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
     justify-content: center;
     flex: 2;
     max-height: 100px;
@@ -87,8 +83,6 @@ body {
     visibility: hidden;
     height: 100%;
     width: 100%;
-    /* background-image: url(https://i.chzbgr.com/full/9480329216/h6847B473/packaged-goods-dunder-mifflin-dwight-anbistanttothe-regio-717555o172-boranteon);  */
-    /* background-image: url(https://66.media.tumblr.com/26b96cb2cb8f7e106e6e2d30ec51cc17/tumblr_pvj6694jRz1ysl7xgo1_500.gif); */
     background-size: cover;
     background-color: rgba(59, 114, 204, 0.311);
     position: fixed;
@@ -107,8 +101,6 @@ body {
 #dwight-banner {
     visibility: hidden;
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
     justify-content: center;
     flex: 2;
     max-height: 100px;
@@ -120,13 +112,11 @@ body {
     display: flex;
     flex: 1;
     padding-left: 20px;
-    /* padding-top: 5px; */
 }
 
 .next-tag-jim,
 .next-tag-dwight {
     visibility: hidden;
-    /* position: relative; */
     display: flex;
     justify-content: flex-end;
     padding-top: 15%;
@@ -165,10 +155,11 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     opacity: 75%;
+    padding: 10px;
 }
 
-#choiceJimA,
-#choiceJimB,
+.choiceJim,
+.choiceJim,
 .choiceDwight,
 .choiceDwight {
     background-color: #d9dfff;
@@ -180,21 +171,21 @@ body {
     display: inline-block;
     font-size: 16px;
     margin: 10px;
+    font-family: 'Special Elite', cursive;
 }
 
-#choiceJimA:hover,
-#choiceJimB:hover,
+.choiceJim:hover,
+.choiceJim:hover,
 .choiceDwight:hover,
 .choiceDwight:hover {
-    /* background-color: #0f5298; */
     background-color: #0f5298;
     border: none;
     color: #d9dfff;
     padding: 27x 92px;
     text-align: center;
-    /* text-decoration: none; */
     display: inline-block;
     font-size: 16px;
     margin: 10px;
+    font-family: 'Special Elite', cursive;
 }
 

@@ -1,6 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Variables  //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+
 const startEl = document.getElementById('start-btn-container');
 const modalEl = document.getElementById('modal');
 const startButtonJim = document.getElementById('jim');
@@ -18,8 +20,6 @@ const jimBannerEl = document.getElementById('jim-banner');
 const dwightBannerEl = document.getElementById('dwight-banner');
 const choiceJimAbuttonEl = document.getElementById('choiceJimA');
 const choiceJimBbuttonEl = document.getElementById('choiceJimB');
-// const choiceDwightAbuttonEl = document.getElementById('choiceDwightA');
-// const choiceDwightBbuttonEl = document.getElementById('choiceDwightB');
 const jimTrackerEl = document.getElementById('jim-score');
 const dwightTrackerEl = document.getElementById('dwight-score');
 const dwightModalEl = document.getElementById('dwight-modal');
@@ -102,32 +102,33 @@ const returnMain = () => {
 
 let currentJim = {};
 function startGameJim() {
-    currentJIm = {};
-    showNextQuestion(1);
+    currentJim = {};
+    showNextQuestionJim(1);
 }
 
-function showNextQuestion(questionsIndex) {
-    const questions = jimAdventures1.find(jimAdventures1 => jimAdventures1.id === questionsIndex);
-    jimTrackerEl.innerHTML = questions.text;
+function showNextQuestionJim(questionsIndexJim) {
+    const questionsJim = jimAdventures1.find(jimAdventures1 => jimAdventures1.id === questionsIndexJim);
+    jimTrackerEl.innerHTML = questionsJim.text;
     while(jimModalEl.firstChild){
         jimModalEl.removeChild(jimModalEl.firstChild)
     }
 
-    questions.options.forEach(choice => {
-            const button = document.createElement('button');
-            button.innerText = choice.text;
-            button.classList.add('jimDwight');
-            button.addEventListener('click', () => selectOption(choice))
+    questionsJim.options.forEach(choiceJim => {
+            const buttonJim = document.createElement('button');
+            buttonJim.innerText = choiceJim.text;
+            buttonJim.classList.add('choiceJim');
+            buttonJim.addEventListener('click', () => selectOptionJim(choiceJim))
+            jimModalEl.appendChild(buttonJim)
         });
     };
 
-function selectOption(choice) {
-    const nextQuestionId = choice.nextText;
-    if (nextQuestionId <= 0) {
+function selectOptionJim(choiceJim) {
+    const nextQuestionIdJim = choiceJim.nextText;
+    if (nextQuestionIdJim <= 0) {
         return startGameJim()
     }
-    current = Object.assign(current, choice)
-    showNextQuestion(nextQuestionId)
+    currentJim = Object.assign(currentJim, choiceJim)
+    showNextQuestionJim(nextQuestionIdJim)
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -141,17 +142,18 @@ function startGameDwight() {
 }
 
 function showNextQuestion(questionsIndex) {
-    const questions = dwightsAdventures1.find(dwightsAdventures1 => dwightsAdventures1.id === questionsIndex);
-    dwightTrackerEl.innerHTML = questions.text;
+    const questionsDwight = dwightsAdventures1.find(dwightsAdventures1 => dwightsAdventures1.id === questionsIndex);
+    dwightTrackerEl.innerHTML = questionsDwight.text;
     while(dwightModalEl.firstChild){
         dwightModalEl.removeChild(dwightModalEl.firstChild)
     }
 
-    questions.options.forEach(choice => {
+    questionsDwight.options.forEach(choice => {
             const button = document.createElement('button');
             button.innerText = choice.text;
             button.classList.add('choiceDwight');
             button.addEventListener('click', () => selectOption(choice))
+            dwightModalEl.appendChild(button)
         });
     };
 
@@ -160,7 +162,7 @@ function selectOption(choice) {
     if (nextQuestionId <= 0) {
         return startGameDwight()
     }
-    current = Object.assign(current, choice)
+    currentDwight = Object.assign(currentDwight, choice)
     showNextQuestion(nextQuestionId)
 };
 
@@ -179,11 +181,9 @@ startDwightEl.addEventListener('click', startDwight);
 closeTagJim.addEventListener('click', returnMain);
 closeTagDwight.addEventListener('click', returnMain);
 
-
 ///////////////////////////////////////////////////////////////////////////////////////
 //Game Logic Jim        ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
-
 
 const jimAdventures1 = [
     {
