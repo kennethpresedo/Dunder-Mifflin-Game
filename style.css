@@ -169,8 +169,8 @@ body {
 
 #choiceJimA,
 #choiceJimB,
-#choiceDwightA,
-#choiceDwightB {
+.choiceDwight,
+.choiceDwight {
     background-color: #d9dfff;
     border: none;
     color: #0f5298;
@@ -184,8 +184,8 @@ body {
 
 #choiceJimA:hover,
 #choiceJimB:hover,
-#choiceDwightA:hover,
-#choiceDwightB:hover {
+.choiceDwight:hover,
+.choiceDwight:hover {
     /* background-color: #0f5298; */
     background-color: #0f5298;
     border: none;
@@ -197,3 +197,4 @@ body {
     font-size: 16px;
     margin: 10px;
 }
+
